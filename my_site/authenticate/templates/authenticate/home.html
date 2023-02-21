@@ -1,0 +1,16 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+<h1>home page authenticate</h1>
+
+    {% if user.is_authenticated %}
+
+        <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Color: {{ user.fav_color }}</p> add to models and migrate db
+        
+    {% endif %}
+
+{% endblock %}
